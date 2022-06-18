@@ -8,9 +8,14 @@ e = Entry(root, width= 40, borderwidth= 5)
 # Set up calculator box
 e.grid(row = 0, column= 0, columnspan= 3, padx = 5, pady = 5)
 
+# Input numbers into the calculator
 def click_button(number):
-    current = e.get()
-    e.insert(0, str(current) + str(number))
+    e.insert(END, number)
+
+# Clear calculator functionality
+def clear_button():
+    e.delete(0, END)
+
 
 # Create number buttons
 
@@ -32,7 +37,7 @@ button_multiply = Button(root, text = "x", padx = 39, pady = 20, command = click
 button_divide = Button(root, text = "÷", padx = 39, pady = 20, command = click_button)
 button_equal = Button(root, text = "=", padx = 39, pady = 20, command = click_button)
 button_decimal = Button(root, text = ".", padx = 39, pady = 20, command = click_button)
-button_clear = Button(root, text = "Clear", padx = 39, pady = 20, command = click_button)
+button_clear = Button(root, text = "Clear", padx = 39, pady = 20, command = clear_button)
 
 
 # Display buttons 
