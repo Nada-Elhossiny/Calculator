@@ -16,6 +16,17 @@ def click_button(number):
 def clear_button():
     e.delete(0, END)
 
+# Adds the addition functionality
+def add_button():
+    global first_number
+    first_number = e.get()
+    e.delete(0, END)
+
+# Adds the equals functionality
+def solve_button():
+    second_number = e.get()
+    e.delete(0, END)
+    e.insert(0, int(first_number) + int(second_number))
 
 # Create number buttons
 
@@ -31,11 +42,11 @@ button_9 = Button(root, text = "9", padx = 40, pady = 20, command = lambda: clic
 button_0 = Button(root, text = "0", padx = 40, pady = 20, command = lambda: click_button(0))
 
 # Create operation buttons
-button_plus = Button(root, text = "+", padx = 39, pady = 20, command = click_button)
+button_plus = Button(root, text = "+", padx = 39, pady = 20, command = add_button)
 button_subtract = Button(root, text = "-", padx = 39, pady = 20, command = click_button)
 button_multiply = Button(root, text = "x", padx = 39, pady = 20, command = click_button)
 button_divide = Button(root, text = "÷", padx = 39, pady = 20, command = click_button)
-button_equal = Button(root, text = "=", padx = 39, pady = 20, command = click_button)
+button_equal = Button(root, text = "=", padx = 39, pady = 20, command = solve_button)
 button_decimal = Button(root, text = ".", padx = 39, pady = 20, command = click_button)
 button_clear = Button(root, text = "Clear", padx = 39, pady = 20, command = clear_button)
 
