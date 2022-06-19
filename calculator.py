@@ -1,9 +1,10 @@
 from tkinter import *
+from tkmacosx import Button
 
 root = Tk()
-root.title("Your Calculator")
+root.title("Calculator")
 
-e = Entry(root, width= 40, borderwidth= 1)
+e = Entry(root, width= 50, borderwidth= 1)
 
 # Set up calculator box
 e.grid(row = 0, column= 0, columnspan= 5, padx = 5, pady = 5)
@@ -111,27 +112,27 @@ def solve_button():
 
 # Create number buttons
 
-button_1 = Button(root, text = "1", padx = 25, pady = 20, command = lambda: click_button(1))
-button_2 = Button(root, text = "2", padx = 25, pady = 20, command = lambda: click_button(2))
-button_3 = Button(root, text = "3", padx = 25, pady = 20, command = lambda: click_button(3))
-button_4 = Button(root, text = "4", padx = 25, pady = 20, command = lambda: click_button(4))
-button_5 = Button(root, text = "5", padx = 25, pady = 20, command = lambda: click_button(5))
-button_6 = Button(root, text = "6", padx = 25, pady = 20, command = lambda: click_button(6))
-button_7 = Button(root, text = "7", padx = 25, pady = 20, command = lambda: click_button(7))
-button_8 = Button(root, text = "8", padx = 25, pady = 20, command = lambda: click_button(8))
-button_9 = Button(root, text = "9", padx = 25, pady = 20, command = lambda: click_button(9))
-button_0 = Button(root, text = "0", padx = 72, pady = 20, command = lambda: click_button(0))
+button_1 = Button(root, text = "1", padx = 10, pady = 20, command = lambda: click_button(1))
+button_2 = Button(root, text = "2", padx = 10, pady = 20, command = lambda: click_button(2))
+button_3 = Button(root, text = "3", padx = 10, pady = 20, command = lambda: click_button(3))
+button_4 = Button(root, text = "4", padx = 10, pady = 20, command = lambda: click_button(4))
+button_5 = Button(root, text = "5", padx = 10, pady = 20, command = lambda: click_button(5))
+button_6 = Button(root, text = "6", padx = 10, pady = 20, command = lambda: click_button(6))
+button_7 = Button(root, text = "7", padx = 10, pady = 20, command = lambda: click_button(7))
+button_8 = Button(root, text = "8", padx = 10, pady = 20, command = lambda: click_button(8))
+button_9 = Button(root, text = "9", padx = 10, pady = 20, command = lambda: click_button(9))
+button_0 = Button(root, text = "0", padx = 70, pady = 20, command = lambda: click_button(0))
 
 # Create operation buttons
-button_plus = Button(root, text = "+", padx = 24, pady = 20, command = add_button)
-button_subtract = Button(root, text = "-", padx = 24, pady = 20, command = subtract_button)
-button_multiply = Button(root, text = "x", padx = 24, pady = 20, command = multiply_button)
-button_divide = Button(root, text = "÷", padx = 24, pady = 20, command = divide_button)
-button_exponent = Button(root, text = "^", padx = 26, pady = 20, command = exponent_button)
-button_percent = Button(root, text = "%", padx = 24, pady = 20, command = percent_button)
-button_equal = Button(root, text = "=", padx = 24, pady = 20, command = solve_button)
-button_decimal = Button(root, text = ".", padx = 28, pady = 20, command = click_button)
-button_clear = Button(root, text = "AC", padx = 21, pady = 20, command = clear_button)
+button_plus = Button(root, text = "+", bg ='orange', fg='white', padx = 10, pady = 20, command = add_button)
+button_subtract = Button(root, text = "-", bg ='orange', fg='white', padx = 10, pady = 20, command = subtract_button)
+button_multiply = Button(root, text = "x", bg ='orange', fg='white', padx = 10, pady = 20, command = multiply_button)
+button_divide = Button(root, text = "÷", bg ='orange', fg='white', padx = 10, pady = 20, command = divide_button)
+button_exponent = Button(root, text = "^", padx = 10, pady = 20, command = exponent_button)
+button_percent = Button(root, text = "%", padx = 10, pady = 20, command = percent_button)
+button_equal = Button(root, text = "=", bg ='orange', fg='white', padx = 10, pady = 20, command = solve_button)
+button_decimal = Button(root, text = ".", padx = 10, pady = 20, command = click_button)
+button_clear = Button(root, text = "AC", padx = 10, pady = 20, command = clear_button)
 
 
 # Display buttons 
