@@ -17,6 +17,12 @@ def click_button(number):
 def clear_button():
     e.delete(0, END)
 
+# Adds the decimal functionality
+def decimal_button(number):
+    first_number = e.get()
+    e.delete(0, END)
+    e.insert(0, str(first_number) + str(number))
+
 # Adds the addition functionality
 def add_button():
     global first_number
@@ -131,7 +137,7 @@ button_divide = Button(root, text = "÷", bg ='orange', fg='white', padx = 10, p
 button_exponent = Button(root, text = "^", padx = 10, pady = 20, command = exponent_button)
 button_percent = Button(root, text = "%", padx = 10, pady = 20, command = percent_button)
 button_equal = Button(root, text = "=", bg ='orange', fg='white', padx = 10, pady = 20, command = solve_button)
-button_decimal = Button(root, text = ".", padx = 10, pady = 20, command = click_button)
+button_decimal = Button(root, text = ".", padx = 10, pady = 20, command = lambda: decimal_button("."))
 button_clear = Button(root, text = "AC", padx = 10, pady = 20, command = clear_button)
 
 
