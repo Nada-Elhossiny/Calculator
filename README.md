@@ -1,5 +1,5 @@
 # Calculator
-A basic GUI calculator using Tkinter in Python.
+A basic GUI calculator using Tkinter in `Python`.
 
 The Calculator supports 
 - Addition
